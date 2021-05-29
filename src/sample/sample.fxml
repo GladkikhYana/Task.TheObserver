@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.canvas.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane prefHeight="500.0" prefWidth="500.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+   <top>
+      <VBox prefHeight="199.0" prefWidth="500.0" BorderPane.alignment="CENTER">
+         <children>
+            <HBox prefHeight="32.0" prefWidth="500.0">
+               <children>
+                  <Label text="Таймер" />
+                  <TextField fx:id="timer" prefHeight="26.0" prefWidth="86.0" />
+                  <Label text="Повтор" />
+                  <TextField fx:id="repeat" prefHeight="26.0" prefWidth="96.0" />
+                  <Button fx:id="start" mnemonicParsing="false" onAction="#Start" text="Start" />
+                  <Button fx:id="stop" mnemonicParsing="false" onAction="#Stop" text="Stop" />
+                  <Button fx:id="clean" mnemonicParsing="false" onAction="#Clean" text="Clear" />
+               </children>
+            </HBox>
+            <HBox prefHeight="36.0" prefWidth="500.0">
+               <children>
+                  <Label fx:id="mess" text="Таймер неактивен" />
+                  <TextField fx:id="dindon" />
+                  <Button fx:id="stCount" mnemonicParsing="false" onAction="#startCount" text="Start" />
+                  <Button fx:id="spCount" mnemonicParsing="false" onAction="#stopCount" text="Stop" />
+               </children>
+            </HBox>
+            <HBox prefHeight="57.0" prefWidth="500.0">
+               <children>
+                  <Label text="Звонок" />
+                  <TextField fx:id="coll" onAction="#startColl" />
+                  <Button fx:id="stColl" mnemonicParsing="false" onAction="#startColl" text="Start" />
+                  <Button fx:id="spColl" mnemonicParsing="false" onAction="#stopColl" text="Stop" />
+               </children>
+            </HBox>
+            <HBox prefHeight="63.0" prefWidth="500.0">
+               <children>
+                  <Label text="Отсчет" />
+                  <TextField fx:id="clock" />
+                  <Button fx:id="stClock" mnemonicParsing="false" onAction="#startClock" text="Start" />
+                  <Button fx:id="spClock" mnemonicParsing="false" onAction="#stopClock" text="Stop" />
+               </children>
+            </HBox>
+            <Label text="Песочные часы" />
+         </children>
+      </VBox>
+   </top>
+   <center>
+      <Canvas fx:id="can" height="277.0" width="305.0" BorderPane.alignment="CENTER" />
+   </center>
+</BorderPane>
